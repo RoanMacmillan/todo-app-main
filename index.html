@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Todo app</title>
+
+
+<body id="bg">
+
+
+  <main>
+
+    <nav>
+
+      <h1>Todo</h1>
+
+
+      <div class="right-child">
+        <img class="toggle" id="sun" src="./images/icon-sun.svg">
+      </div>
+
+    </nav>
+
+    <div class="main-container">
+
+      <div class="input-container">
+        <button id="add-btn"></button>
+
+        <input name="todo" id="todo" type="text" placeholder="Create a new todo...">
+
+
+      </div>
+
+      <div class="list-container">
+
+        <ul id="ul-list">
+
+          <li>
+            <label class="list">
+              <input id="test" class="checkbox" type="checkbox" checked>
+              <span class="text">Complete online JavaScript course</span>
+            </label>
+            <span class="remove"></span>
+          </li>
+
+          <li>
+            <label class="list">
+              <input class="checkbox" type="checkbox">
+              <span class="text">Jog around the park 3x</span>
+            </label>
+            <span class="remove"></span>
+          </li>
+
+          <li>
+            <label class="list">
+              <input class="checkbox" type="checkbox">
+              <span class="text">10 minutes meditation</span>
+            </label>
+            <span class="remove"></span>
+          </li>
+
+          <li>
+            <label class="list">
+              <input class="checkbox" type="checkbox">
+              <span class="text">Read for 1 hour</span>
+            </label>
+            <span class="remove"></span>
+          </li>
+
+          <li>
+            <label class="list">
+              <input class="checkbox" type="checkbox">
+              <span class="text">Pick up groceries</span>
+            </label>
+            <span class="remove"></span>
+          </li>
+
+          <li>
+            <label class="list">
+              <input class="checkbox" type="checkbox">
+              <span class="text">Complete Todo App on Frontend Mentor</span>
+            </label>
+            <span class="remove"></span>
+          </li>
+
+
+        </ul>
+
+        <div class="list-menu">
+
+          <div>
+          <span id="items-left">6</span> <span>items left</span>
+</div>
+          <div class="filters">
+
+
+
+              <span class="filter-btn" id="alltest">All</span>
+
+
+              <span class="filter-btn" id="activetest">Active</span>
+
+
+              <span class="filter-btn" id="comtest">Completed</span>
+
+
+          </div>
+
+         
+
+          <span id="clear-btn">Clear Completed</span>
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+
+    <div class="drag-text">
+      Drag and drop to reorder list
+
+      
+
+    </div>
+
+
+    
+
+
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.js" integrity="sha512-d+dtcSjz831KbYcB3pS7cd3cqlaZ/gbbnZWC4KeLM8AToNtm83Rbc5au5k3bFBh6EwlphOGJtj7oDg6k+NGbPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+const sortableList = document.getElementById('ul-list');
+
+
+new Sortable(sortableList, {
+	swap: true, // Enable swap plugin
+	swapClass: 'highlight', // The class applied to the hovered swap item
+	animation: 150
+
+
+  
+});
+
+</script>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script> -->
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
